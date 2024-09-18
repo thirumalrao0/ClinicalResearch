@@ -1,0 +1,48 @@
+<c:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core"
+    xmlns:smartform="sap.ui.comp.smartform"
+    xmlns:smartfield="sap.ui.comp.smartfield"
+>
+    <Dialog>
+        <smartform:SmartForm editable="true">
+            <smartform:layout>
+                <smartform:ColumnLayout
+                    columnsM="2"
+                    columnsL="3"
+                    columnsXL="4"
+                />
+            </smartform:layout>
+            <smartform:Group>
+                <smartform:GroupElement>
+                    <smartfield:SmartField
+                        editable="false"
+                        value="{SiteCode}"
+                    />
+                </smartform:GroupElement>
+                <smartform:GroupElement>
+                    <smartfield:SmartField value="{Certificate}" />
+                </smartform:GroupElement>
+                <smartform:GroupElement>
+                    <smartfield:SmartField value="{Institution}" />
+                </smartform:GroupElement>
+                <smartform:GroupElement>
+                    <smartfield:SmartField value="{SpecialitiesDescription}" />
+                </smartform:GroupElement>
+                <smartform:GroupElement>
+                    <smartfield:SmartField value="{YearCompleted}" />
+                </smartform:GroupElement>
+            </smartform:Group>
+        </smartform:SmartForm>
+        <Toolbar>
+            <Button
+                text="Add"
+                press="onAdd1"
+            />
+            <Button
+                text="cancel"
+                press="onCancel1"
+            />
+        </Toolbar>
+    </Dialog>
+</c:FragmentDefinition>

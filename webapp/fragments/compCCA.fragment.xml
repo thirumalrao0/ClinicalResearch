@@ -1,0 +1,36 @@
+<c:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core"
+    xmlns:smartfield="sap.ui.comp.smartfield"
+    xmlns:smartform="sap.ui.comp.smartform"
+>
+    <smartform:SmartForm id="smartFormCompanyAddress">
+        <smartform:layout>
+            <smartform:ColumnLayout
+                columnsM="2"
+                columnsL="3"
+                columnsXL="4"
+            />
+        </smartform:layout>
+        <smartform:Group>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{InstitutionCode}" />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{Company_InstitutionName}" />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{Address1}" />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{Address2}" />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{Address3}" />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{Address4}" />
+            </smartform:GroupElement>
+        </smartform:Group>
+    </smartform:SmartForm>
+</c:FragmentDefinition>

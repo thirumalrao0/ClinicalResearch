@@ -1,0 +1,26 @@
+<c:FragmentDefinition
+    xmlns:c="sap.ui.core"
+    xmlns:smarttable="sap.ui.comp.smarttable"
+    xmlns:m="sap.m"
+>
+    <smarttable:SmartTable
+        entitySet="specialitiessubs"
+        tableBindingPath="to_specialitiessubs"
+        initiallyVisibleFields="Specialities,SubSpecialities"
+        enableAutoBinding="true"
+    >
+        <smarttable:customToolbar>
+            <m:Toolbar>
+                <m:ToolbarSpacer />
+                <m:Button
+                    press="deleteFormItems"
+                    icon="sap-icon://delete"
+                />
+                <m:Button
+                    press="addSepc"
+                    icon="sap-icon://add"
+                />
+            </m:Toolbar>
+        </smarttable:customToolbar>
+    </smarttable:SmartTable>
+</c:FragmentDefinition>

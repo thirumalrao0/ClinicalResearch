@@ -1,0 +1,44 @@
+<c:FragmentDefinition
+    xmlns:c="sap.ui.core"
+    xmlns:smartform="sap.ui.comp.smartform"
+    xmlns:smartfield="sap.ui.comp.smartfield"
+    xmlns:sf="sap.ui.layout.form"
+    xmlns:m="sap.m"
+>
+    <sf:SimpleForm
+        id="simpleFormCheckList"
+        layout="ResponsiveGridLayout"
+        columnsL="2"
+        columnsM="1"
+    >
+        <m:Label text="CV" />
+        <m:RadioButtonGroup id="radioButtonCv">
+            <m:RadioButton text="Yes" />
+            <m:RadioButton text="No" />
+        </m:RadioButtonGroup>
+        <!-- Scanned ID -->
+        <m:Label text="Scanned ID" />
+        <m:RadioButtonGroup id="radioButtonScannedID">
+            <m:RadioButton text="Yes" />
+            <m:RadioButton text="No" />
+        </m:RadioButtonGroup>
+        <!-- Scanned Title -->
+        <m:Label text="Scanned Title" />
+        <m:RadioButtonGroup id="radioButtonScannedTitle">
+            <m:RadioButton text="Yes" />
+            <m:RadioButton text="No" />
+        </m:RadioButtonGroup>
+        <!-- Scanned License -->
+        <m:Label text="Scanned License" />
+        <m:RadioButtonGroup id="radioButtonScannedLicense">
+            <m:RadioButton text="Yes" />
+            <m:RadioButton text="No" />
+        </m:RadioButtonGroup>
+        <!-- IIATA Training -->
+        <m:Label text="IIATA Training" />
+        <m:RadioButtonGroup id="radioButtonIIATATraining">
+            <m:RadioButton text="Yes" />
+            <m:RadioButton text="No" />
+        </m:RadioButtonGroup>
+    </sf:SimpleForm>
+</c:FragmentDefinition>

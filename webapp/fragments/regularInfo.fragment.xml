@@ -1,0 +1,27 @@
+<c:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core"
+    xmlns:smarttable="sap.ui.comp.smarttable"
+    xmlns:m="sap.m"
+>
+    <smarttable:SmartTable
+        entitySet="CRregulatoryinformation"
+        tableBindingPath="to_CRregulatoryInfo"
+        initiallyVisibleFields="DocCategory,DocName,Avialability,DocStatus,EndDate,Remarks"
+        enableAutoBinding="true"
+    >
+        <smarttable:customToolbar>
+            <m:Toolbar>
+                <m:ToolbarSpacer />
+                <m:Button
+                    press="deleteFormItems"
+                    icon="sap-icon://delete"
+                />
+                <m:Button
+                    press="addRegInfo"
+                    icon="sap-icon://add"
+                />
+            </m:Toolbar>
+        </smarttable:customToolbar>
+    </smarttable:SmartTable>
+</c:FragmentDefinition>

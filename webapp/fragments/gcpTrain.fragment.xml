@@ -1,0 +1,26 @@
+<c:FragmentDefinition
+    xmlns:m="sap.m"
+    xmlns:c="sap.ui.core"
+    xmlns:smarttable="sap.ui.comp.smarttable"
+>
+    <smarttable:SmartTable
+        entitySet="GCPTRAININGS"
+        tableBindingPath="to_GCPTRAININGS"
+        initiallyVisibleFields="TrainingProvider,TitleofTraining,Version,DateofCompleted,Status"
+        enableAutoBinding="true"
+    >
+        <smarttable:customToolbar>
+            <m:Toolbar>
+                <m:ToolbarSpacer />
+                <m:Button
+                    press="deleteFormItems"
+                    icon="sap-icon://delete"
+                />
+                <m:Button
+                    press="onGcp"
+                    icon="sap-icon://add"
+                />
+            </m:Toolbar>
+        </smarttable:customToolbar>
+    </smarttable:SmartTable>
+</c:FragmentDefinition>

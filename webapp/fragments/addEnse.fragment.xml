@@ -1,0 +1,60 @@
+<c:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core"
+    xmlns:smartform="sap.ui.comp.smartform"
+    xmlns:smartfield="sap.ui.comp.smartfield"
+>
+    <Dialog>
+        <smartform:SmartForm editable="true">
+            <smartform:layout>
+                <smartform:ColumnLayout
+                    columnsM="2"
+                    columnsL="3"
+                    columnsXL="4"
+                />
+            </smartform:layout>
+            <smartform:Group>
+                <smartform:GroupElement>
+                    <smartfield:SmartField
+                        editable="false"
+                        value="{SiteCode}"
+                    />
+                </smartform:GroupElement>
+                <smartform:GroupElement>
+                    <smartfield:SmartField
+                        
+                        value="{LicenseType}"
+                    />
+                </smartform:GroupElement>
+                <smartform:GroupElement>
+                    <smartfield:SmartField value="{LicenseIssuer}" />
+                </smartform:GroupElement>
+                <smartform:GroupElement>
+                    <smartfield:SmartField value="{ProfLicenseNumber}" />
+                </smartform:GroupElement>
+                <smartform:GroupElement>
+                    <smartfield:SmartField value="{Country}" />
+                </smartform:GroupElement>
+                <smartform:GroupElement>
+                    <smartfield:SmartField value="{State_Region}" />
+                </smartform:GroupElement>
+                <smartform:GroupElement>
+                    <smartfield:SmartField value="{IssueDate}" />
+                </smartform:GroupElement>
+                <smartform:GroupElement>
+                    <smartfield:SmartField value="{ExpirationDate}" />
+                </smartform:GroupElement>
+            </smartform:Group>
+        </smartform:SmartForm>
+        <Toolbar>
+            <Button
+                text="Add"
+                press="onAdd1"
+            />
+            <Button
+                text="cancel"
+                press="onCancel1"
+            />
+        </Toolbar>
+    </Dialog>
+</c:FragmentDefinition>

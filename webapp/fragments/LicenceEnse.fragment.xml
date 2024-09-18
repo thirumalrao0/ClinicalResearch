@@ -1,0 +1,26 @@
+<c:FragmentDefinition
+    xmlns:m="sap.m"
+    xmlns:c="sap.ui.core"
+    xmlns:smarttable="sap.ui.comp.smarttable"
+>
+    <smarttable:SmartTable
+        entitySet="CRLICENSES"
+        tableBindingPath="to_CRLicenses"
+        initiallyVisibleFields="LicenseType,LicenseIssuer,ProfLicenseNumber,Country,State_Region,IssueDate,ExpirationDate"
+        enableAutoBinding="true"
+    >
+        <smarttable:customToolbar>
+            <m:Toolbar>
+                <m:ToolbarSpacer />
+                <m:Button
+                    press="deleteFormItems"
+                    icon="sap-icon://delete"
+                />
+                <m:Button
+                    press="addEnse"
+                    icon="sap-icon://add"
+                />
+            </m:Toolbar>
+        </smarttable:customToolbar>
+    </smarttable:SmartTable>
+</c:FragmentDefinition>

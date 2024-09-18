@@ -1,0 +1,42 @@
+<c:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core"
+    xmlns:smartform="sap.ui.comp.smartform"
+    xmlns:smartfield="sap.ui.comp.smartfield"
+>
+    <smartform:SmartForm id="smartFormLogDetails">
+        <smartform:layout>
+            <smartform:ColumnLayout
+                columnsM="2"
+                columnsL="3"
+                columnsXL="4"
+            />
+        </smartform:layout>
+        <smartform:Group>
+            <smartform:GroupElement>
+                <smartfield:SmartField
+                    value="{Createdby}"
+                    entitySet="CRAttachment"
+                />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField
+                    value="{Createdon}"
+                    entitySet="CRAttachment"
+                />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField
+                    value="{Changedby}"
+                    entitySet="CRAttachment"
+                />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField
+                    value="{Changedon}"
+                    entitySet="CRAttachment"
+                />
+            </smartform:GroupElement>
+        </smartform:Group>
+    </smartform:SmartForm>
+</c:FragmentDefinition>

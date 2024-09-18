@@ -1,0 +1,28 @@
+<c:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core"
+    xmlns:smarttable="sap.ui.comp.smarttable"
+    xmlns:m="sap.m"
+>
+    <smarttable:SmartTable
+        entitySet="totalcrexp"
+        tableBindingPath="to_TCREXP"
+        id="smartTable7"
+        enableAutoBinding="true"
+        initiallyVisibleFields="therapeuticarea,subtherapeuticarea,sponsername,CROname,Numofcomstu,Numofongstu,startdate,enddate,Status"
+    >
+        <smarttable:customToolbar>
+            <m:Toolbar>
+                <m:ToolbarSpacer />
+                <m:Button
+                    press="deleteFormItems"
+                    icon="sap-icon://delete"
+                />
+                <m:Button
+                    press="addTCRE"
+                    icon="sap-icon://add"
+                />
+            </m:Toolbar>
+        </smarttable:customToolbar>
+    </smarttable:SmartTable>
+</c:FragmentDefinition>

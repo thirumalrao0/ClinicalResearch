@@ -1,17 +1,22 @@
 sap.ui.define([
-  "sap/ui/core/mvc/Controller", "sap/ui/core/Fragment", "sap/m/MessageToast", "sap/ui/model/Filter"
+  "sap/ui/core/mvc/Controller", "sap/ui/core/Fragment", "sap/m/MessageToast", "sap/ui/model/Filter", "sap/ui/model/Sorter"
 ],
-  function (Controller, Fragment, MessageToast, Filter) {
+  function (Controller,
+    Fragment,
+    MessageToast,
+    Filter,
+    Sorter) {
     "use strict";
     return Controller.extend("task.thirumal.controller.View1", {
       onInit: function () {
+
         this.fModel = this.getOwnerComponent().getModel()
         this.fModel.setDeferredGroups(this.fModel.getDeferredGroups().concat(
-          "createChanges"
+          ["create", "update"]
         ))
       },
       addBtn() {
-        var newData = this.fModel.createEntry("/CRGendata", { groupId: "createChanges" })
+        var newData = this.fModel.createEntry("/CRGendata", { groupId: "create" })
         Fragment.load({
           id: this.getView().getId(),
           name: "task.thirumal.fragments.add",
@@ -48,6 +53,7 @@ sap.ui.define([
         var sTable = this.byId("smartTable")
         var gTable = sTable.getTable()
         var indices = gTable.getSelectedItems()
+        this.byId("deleteId").setEnabled(false);
         indices.forEach(item => {
           var spath = item.getBindingContext().getPath()
           this.fModel.remove(spath, {
@@ -59,6 +65,19 @@ sap.ui.define([
             }
           })
         });
+      },
+      onSelectionChange() {
+
+        var sTable = this.byId("smartTable");
+        var gTable = sTable.getTable();
+        var indices = gTable.getSelectedItems();
+
+
+        if (indices.length > 0) {
+          this.byId("deleteId").setEnabled(true);
+        } else {
+          this.byId("deleteId").setEnabled(false);
+        }
       },
       search(evn) {
         var query = evn.getParameter("query")
@@ -77,9 +96,28 @@ sap.ui.define([
         var gTable = sTable.getTable()
         var binding = gTable.getBinding("items")
         binding.filter(afilter)
+      },
+      sortDialog() {
+        Fragment.load({
+          id: this.getView().getId(),
+          name: "task.thirumal.fragments.sort",
+          controller: this
+        }).then((frag) => {
+          this.getView().addDependent(frag)
+          frag.open()
+        });
+      },
+
+      sortCol(oEvent) {
+        var parms = oEvent.getParameters();
+        var spath = parms.sortItem.getKey();
+        var dec = parms.sortDecending
+        var arr = []
+        arr.push(new Sorter(spath, dec));
+        var oTable = this.byId("smartTable").getTable().getBinding("items")
+        oTable.sort(arr)
+
       }
-
-
 
 
     });

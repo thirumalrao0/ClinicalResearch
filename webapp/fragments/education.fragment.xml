@@ -1,0 +1,26 @@
+<c:FragmentDefinition
+    xmlns:c="sap.ui.core"
+    xmlns:smarttable="sap.ui.comp.smarttable"
+    xmlns:m="sap.m"
+>
+    <smarttable:SmartTable
+        entitySet="CREducation"
+        tableBindingPath="to_EDUCATION"
+        initiallyVisibleFields="Certificate,Institution,SpecialitiesDescription,YearCompleted"
+        enableAutoBinding="true"
+    >
+        <smarttable:customToolbar>
+            <m:Toolbar>
+                <m:ToolbarSpacer />
+                <m:Button
+                    press="deleteFormItems"
+                    icon="sap-icon://delete"
+                />
+                <m:Button
+                    press="addEdu"
+                    icon="sap-icon://add"
+                />
+            </m:Toolbar>
+        </smarttable:customToolbar>
+    </smarttable:SmartTable>
+</c:FragmentDefinition>

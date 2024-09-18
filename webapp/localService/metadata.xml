@@ -1049,7 +1049,7 @@
                 <EntitySet Name="ResearchExpClinicalPhase" EntityType="cds_zsd_clinical_researcher.ResearchExpClinicalPhaseType" sap:content-version="1" sap:deletable-path="Delete_mc" sap:updatable-path="Update_mc"/>
                 <EntitySet Name="RESEARCHEXPERIENCE" EntityType="cds_zsd_clinical_researcher.RESEARCHEXPERIENCEType" sap:content-version="1" sap:deletable-path="Delete_mc" sap:updatable-path="Update_mc"/>
                 <EntitySet Name="specialitiessubs" EntityType="cds_zsd_clinical_researcher.specialitiessubsType" sap:content-version="1" sap:deletable-path="Delete_mc" sap:updatable-path="Update_mc"/>
-                <EntitySet Name="totalcrexp" EntityType="cds_zsd_clinical_researcher.totalcrexpType" sap:content-version="1" sap:deletable-path="Delete_mc" sap:updatable-path="Update_mc"/>
+                <EntitySet Name="" EntityType="cds_zsd_clinical_researcher.totalcrexpType" sap:content-version="1" sap:deletable-path="Delete_mc" sap:updatable-path="Update_mc"/>
                 <EntitySet Name="TherapeuticAreaExp" EntityType="cds_zsd_clinical_researcher.TherapeuticAreaExpType" sap:content-version="1" sap:deletable-path="Delete_mc" sap:updatable-path="Update_mc"/>
                 <EntitySet Name="zdo_crstatus_f4" EntityType="cds_zsd_clinical_researcher.zdo_crstatus_f4Type" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
                 <EntitySet Name="ZDO_F4_SALUT" EntityType="cds_zsd_clinical_researcher.ZDO_F4_SALUTType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>

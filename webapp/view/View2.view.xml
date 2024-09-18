@@ -3,18 +3,225 @@
     controllerName="task.thirumal.controller.View2"
     xmlns="sap.uxap"
     xmlns:m="sap.m"
-    xmlns:smartfield="sap.ui.comp.smartfield"
-    xmlns:smartform="sap.ui.comp.smartform"
     height="100%"
-    xmlns:smarttable="sap.ui.comp.smarttable"
-    xmlns:sf="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
 >
-    <m:Toolbar>
-        <m:ToolbarSpacer />
-        <m:Button
-            text="Edit"
-            press="edit"
-        />
+<m:Page >
+<m:content>
+    <ObjectPageLayout
+      
+    >
+        <headerTitle>
+            <ObjectPageDynamicHeaderTitle>
+                <heading>
+                    <m:Title text="{CRCode}" />
+                </heading>
+                <actions>
+                    <m:Toolbar>
+                        <m:ToolbarSpacer />
+                        <m:Button
+                            text="Edit"
+                            press="edit"
+                        />
+                        <m:Button
+                            text="Delete"
+                            press="deleteItem"
+                        />
+                    </m:Toolbar>
+                </actions>
+            </ObjectPageDynamicHeaderTitle>
+        </headerTitle>
+        <headerContent>
+            <m:Text text="{CRName}"/>
+        </headerContent>
+        <sections>
+            <ObjectPageSection
+                titleUppercase="false"
+                title="General"
+            >
+                <subSections>
+                    <ObjectPageSubSection
+                        title="Name Title"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                fragmentName="task.thirumal.fragments.nameTitle"
+                                type="XML"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection
+                        title="Clinical Phase of Conducted Studies"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                fragmentName="task.thirumal.fragments.clinicalPCS"
+                                type="XML"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection
+                        title="Company,Critical Contact Address"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                fragmentName="task.thirumal.fragments.compCCA"
+                                type="XML"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection
+                        title="Communication"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                fragmentName="task.thirumal.fragments.communication"
+                                type="XML"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection
+                        title="facilities affiliactions"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                fragmentName="task.thirumal.fragments.faciAffiliactions"
+                                type="XML"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection
+                        title="education"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                fragmentName="task.thirumal.fragments.education"
+                                type="XML"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection
+                titleUppercase="false"
+                title="Licence Details"
+            >
+                <subSections>
+                    <ObjectPageSubSection
+                        title="Professional Experience"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                fragmentName="task.thirumal.fragments.professionExp"
+                                type="XML"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection
+                        title="Licence/ENSE"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                fragmentName="task.thirumal.fragments.LicenceEnse"
+                                type="XML"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection
+                        title="GCP Training"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                fragmentName="task.thirumal.fragments.gcpTrain"
+                                type="XML"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection
+                        title="Research Experience"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                fragmentName="task.thirumal.fragments.researchExp"
+                                type="XML"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection
+                        title="specialties/Sub-Specialties"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                fragmentName="task.thirumal.fragments.specSubspec"
+                                type="XML"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection
+                        title="Total Clinical Research Experience"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                fragmentName="task.thirumal.fragments.totalClinicalRE"
+                                type="XML"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection
+                        title="CheckList"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                fragmentName="task.thirumal.fragments.checkList"
+                                type="XML"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection
+                        title="Regular Information"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                fragmentName="task.thirumal.fragments.regularInfo"
+                                type="XML"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection
+                titleUppercase="false"
+                title="Log Details"
+            >
+                <subSections>
+                    <ObjectPageSubSection titleUppercase="false">
+                        <blocks>
+                            <core:Fragment
+                                fragmentName="task.thirumal.fragments.logDetails"
+                                type="XML"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+        </sections>
+    </ObjectPageLayout>
+    <m:OverflowToolbar class="sapUiResponsiveMargin">
+    <m:ToolbarSpacer />
         <m:Button
             id="idSaveButton"
             visible="false"
@@ -33,449 +240,8 @@
             text="Cancel"
             press="cancel"
         />
-    </m:Toolbar>
-    <ObjectPageLayout
-        id="ObjectPageLayout"
-        upperCaseAnchorBar="false"
-    >
-        <headerTitle>
-            <ObjectPageHeader objectTitle="Clinical Research" />
-        </headerTitle>
-        <headerContent>
-            <m:ObjectAttribute
-                title=""
-                text="This example explains the rules for the rendering of sections"
-            />
-        </headerContent>
-        <sections>
-            <ObjectPageSection
-                titleUppercase="false"
-                title="General"
-            >
-                <subSections>
-                    <ObjectPageSubSection
-                        title="Name Title"
-                        titleUppercase="false"
-                    >
-                        <blocks>
-                            <smartform:SmartForm id="smartFormNameTitle">
-                                <smartform:layout>
-                                    <smartform:ColumnLayout
-                                        columnsM="2"
-                                        columnsL="3"
-                                        columnsXL="4"
-                                    />
-                                </smartform:layout>
-                                <smartform:Group>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField value="{SiteCode}" />
-                                    </smartform:GroupElement>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField value="{SiteName}" />
-                                    </smartform:GroupElement>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField value="{CRCode}" />
-                                    </smartform:GroupElement>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField value="{Salutation}" />
-                                    </smartform:GroupElement>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField value="{Job_ProfessionalTitle}" />
-                                    </smartform:GroupElement>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField value="{CRName}" />
-                                    </smartform:GroupElement>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField value="{ClincialRhRole}" />
-                                    </smartform:GroupElement>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField value="{Specialities}" />
-                                    </smartform:GroupElement>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField value="{CRExperience}" />
-                                    </smartform:GroupElement>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField value="{Cerofgoodclinicalprac}" />
-                                    </smartform:GroupElement>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField value="{CVAvailable}" />
-                                    </smartform:GroupElement>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField value="{Status}" />
-                                    </smartform:GroupElement>
-                                </smartform:Group>
-                            </smartform:SmartForm>
-                        </blocks>
-                    </ObjectPageSubSection>
-                    <ObjectPageSubSection
-                        title="Clinical Phase of Conducted Studies"
-                        titleUppercase="false"
-                    >
-                        <blocks>
-                            <smartform:SmartForm id="smartFormClinicalPhase">
-                                <smartform:layout>
-                                    <smartform:ColumnLayout
-                                        columnsM="2"
-                                        columnsL="3"
-                                        columnsXL="4"
-                                    />
-                                </smartform:layout>
-                                <smartform:Group>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField
-                                            value="{StudyPhaseType}"
-                                            entitySet="ClinicalPOCSites"
-                                        />
-                                    </smartform:GroupElement>
-                                </smartform:Group>
-                            </smartform:SmartForm>
-                        </blocks>
-                    </ObjectPageSubSection>
-                    <ObjectPageSubSection
-                        title="Company,Critical Contact Address"
-                        titleUppercase="false"
-                    >
-                        <blocks>
-                            <smartform:SmartForm id="smartFormCompanyAddress">
-                                <smartform:layout>
-                                    <smartform:ColumnLayout
-                                        columnsM="2"
-                                        columnsL="3"
-                                        columnsXL="4"
-                                    />
-                                </smartform:layout>
-                                <smartform:Group>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField value="{InstitutionCode}" />
-                                    </smartform:GroupElement>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField value="{Company_InstitutionName}" />
-                                    </smartform:GroupElement>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField value="{Address1}" />
-                                    </smartform:GroupElement>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField value="{Address2}" />
-                                    </smartform:GroupElement>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField value="{Address3}" />
-                                    </smartform:GroupElement>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField value="{Address4}" />
-                                    </smartform:GroupElement>
-                                </smartform:Group>
-                            </smartform:SmartForm>
-                        </blocks>
-                    </ObjectPageSubSection>
-                    <ObjectPageSubSection
-                        title="Communication"
-                        titleUppercase="false"
-                    >
-                        <blocks>
-                            <smartform:SmartForm id="smartFormCommunication">
-                                <smartform:layout>
-                                    <smartform:ColumnLayout
-                                        columnsM="2"
-                                        columnsL="3"
-                                        columnsXL="4"
-                                    />
-                                </smartform:layout>
-                                <smartform:Group>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField value="{Officetelephone}" />
-                                    </smartform:GroupElement>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField value="{Extension}" />
-                                    </smartform:GroupElement>
-                                </smartform:Group>
-                            </smartform:SmartForm>
-                        </blocks>
-                    </ObjectPageSubSection>
-                    <ObjectPageSubSection
-                        title="facilities affiliactions"
-                        titleUppercase="false"
-                    >
-                        <blocks>
-                            <smarttable:SmartTable
-                                entitySet="CRFACILITIESAFFILIATIONS"
-                                initiallyVisibleFields="Primaryfacility,DepartmentName,Address"
-                                enableAutoBinding="true"
-                            >
-                                <smarttable:customToolbar>
-                                    <m:Toolbar>
-                                        <m:ToolbarSpacer />
-                                        <m:Button icon="sap-icon://add" />
-                                    </m:Toolbar>
-                                </smarttable:customToolbar>
-                            </smarttable:SmartTable>
-                        </blocks>
-                    </ObjectPageSubSection>
-                    <ObjectPageSubSection
-                        title="education"
-                        titleUppercase="false"
-                    >
-                        <blocks>
-                            <smarttable:SmartTable
-                                entitySet="CREducation"
-                                initiallyVisibleFields="Certificate,Institution,SpecialitiesDescription,YearCompleted"
-                                enableAutoBinding="true"
-                            >
-                                <smarttable:customToolbar>
-                                    <m:Toolbar>
-                                        <m:ToolbarSpacer />
-                                        <m:Button icon="sap-icon://add" />
-                                    </m:Toolbar>
-                                </smarttable:customToolbar>
-                            </smarttable:SmartTable>
-                        </blocks>
-                    </ObjectPageSubSection>
-                </subSections>
-            </ObjectPageSection>
-            <ObjectPageSection
-                titleUppercase="false"
-                title="Licence Details"
-            >
-                <subSections>
-                    <ObjectPageSubSection
-                        title="Professional Experience"
-                        titleUppercase="false"
-                    >
-                        <blocks>
-                            <smarttable:SmartTable
-                                entitySet="ProfessionalExp"
-                                initiallyVisibleFields="JobTitle,department,Yesrst,Yearcom,Remarks"
-                                enableAutoBinding="true"
-                            >
-                                <smarttable:customToolbar>
-                                    <m:Toolbar>
-                                        <m:ToolbarSpacer />
-                                        <m:Button icon="sap-icon://add" />
-                                    </m:Toolbar>
-                                </smarttable:customToolbar>
-                            </smarttable:SmartTable>
-                        </blocks>
-                    </ObjectPageSubSection>
-                    <ObjectPageSubSection
-                        title="Licence/ENSE"
-                        titleUppercase="false"
-                    >
-                        <blocks>
-                            <smarttable:SmartTable
-                                entitySet="CRLICENSES"
-                                initiallyVisibleFields="LicenseType,LicenseIssuer,ProfLicenseNumber,Country,State_Region,IssueDate,ExpirationDate"
-                                enableAutoBinding="true"
-                            >
-                                <smarttable:customToolbar>
-                                    <m:Toolbar>
-                                        <m:ToolbarSpacer />
-                                        <m:Button icon="sap-icon://add" />
-                                    </m:Toolbar>
-                                </smarttable:customToolbar>
-                            </smarttable:SmartTable>
-                        </blocks>
-                    </ObjectPageSubSection>
-                    <ObjectPageSubSection
-                        title="GCP Training"
-                        titleUppercase="false"
-                    >
-                        <blocks>
-                            <smarttable:SmartTable
-                                entitySet="GCPTRAININGS"
-                                initiallyVisibleFields="TrainingProvider,TitleofTraining,Version,DateofCompleted,Status"
-                                enableAutoBinding="true"
-                            >
-                                <smarttable:customToolbar>
-                                    <m:Toolbar>
-                                        <m:ToolbarSpacer />
-                                        <m:Button icon="sap-icon://add" />
-                                    </m:Toolbar>
-                                </smarttable:customToolbar>
-                            </smarttable:SmartTable>
-                        </blocks>
-                    </ObjectPageSubSection>
-                    <ObjectPageSubSection
-                        title="Research Experience"
-                        titleUppercase="false"
-                    >
-                        <blocks>
-                            <smartform:SmartForm id="smartFormResearchExperience">
-                                <smartform:layout>
-                                    <smartform:ColumnLayout
-                                        columnsM="2"
-                                        columnsL="3"
-                                        columnsXL="4"
-                                    />
-                                </smartform:layout>
-                                <smartform:Group>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField
-                                            value="{StudyPhaseType}"
-                                            entitySet="ResearchExpClinicalPhase"
-                                        />
-                                    </smartform:GroupElement>
-                                </smartform:Group>
-                            </smartform:SmartForm>
-                        </blocks>
-                    </ObjectPageSubSection>
-                    <ObjectPageSubSection
-                        title="specialties/Sub-Specialties"
-                        titleUppercase="false"
-                    >
-                        <blocks>
-                            <smarttable:SmartTable
-                                entitySet="specialitiessubs"
-                                initiallyVisibleFields="Specialities,SubSpecialities"
-                                enableAutoBinding="true"
-                            >
-                                <smarttable:customToolbar>
-                                    <m:Toolbar>
-                                        <m:ToolbarSpacer />
-                                        <m:Button icon="sap-icon://add" />
-                                    </m:Toolbar>
-                                </smarttable:customToolbar>
-                            </smarttable:SmartTable>
-                        </blocks>
-                    </ObjectPageSubSection>
-                    <ObjectPageSubSection
-                        title="Total Clinical Research Experience"
-                        titleUppercase="false"
-                    >
-                        <blocks>
-                            <smarttable:SmartTable
-                                id="smartTable7"
-                                entitySet="totalcrexp"
-                                enableAutoBinding="true"
-                                initiallyVisibleFields="therapeuticarea,subtherapeuticarea,sponsername,CROname,Numofcomstu,Numofongstu,startdate,enddate,Status"
-                            >
-                                <smarttable:customToolbar>
-                                    <m:Toolbar>
-                                        <m:ToolbarSpacer />
-                                        <m:Button icon="sap-icon://add" />
-                                    </m:Toolbar>
-                                </smarttable:customToolbar>
-                            </smarttable:SmartTable>
-                        </blocks>
-                    </ObjectPageSubSection>
-                    <ObjectPageSubSection
-                        title="CheckList"
-                        titleUppercase="false"
-                    >
-                        <blocks>
-                            <smartform:SmartForm id="idspec">
-                                <smartform:Group>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField
-                                            value="{SpecialityCIE10}"
-                                            entitySet="RESEARCHEXPERIENCE"
-                                        />
-                                    </smartform:GroupElement>
-                                </smartform:Group>
-                            </smartform:SmartForm>
-                            <sf:SimpleForm
-                                id="simpleFormCheckList"
-                                layout="ResponsiveGridLayout"
-                                columnsL="2"
-                                columnsM="1"
-                            >
-                                <m:Label text="CV" />
-                                <m:RadioButtonGroup id="radioButtonCv">
-                                    <m:RadioButton text="Yes" />
-                                    <m:RadioButton text="No" />
-                                </m:RadioButtonGroup>
-                                <!-- Scanned ID -->
-                                <m:Label text="Scanned ID" />
-                                <m:RadioButtonGroup id="radioButtonScannedID">
-                                    <m:RadioButton text="Yes" />
-                                    <m:RadioButton text="No" />
-                                </m:RadioButtonGroup>
-                                <!-- Scanned Title -->
-                                <m:Label text="Scanned Title" />
-                                <m:RadioButtonGroup id="radioButtonScannedTitle">
-                                    <m:RadioButton text="Yes" />
-                                    <m:RadioButton text="No" />
-                                </m:RadioButtonGroup>
-                                <!-- Scanned License -->
-                                <m:Label text="Scanned License" />
-                                <m:RadioButtonGroup id="radioButtonScannedLicense">
-                                    <m:RadioButton text="Yes" />
-                                    <m:RadioButton text="No" />
-                                </m:RadioButtonGroup>
-                                <!-- IIATA Training -->
-                                <m:Label text="IIATA Training" />
-                                <m:RadioButtonGroup id="radioButtonIIATATraining">
-                                    <m:RadioButton text="Yes" />
-                                    <m:RadioButton text="No" />
-                                </m:RadioButtonGroup>
-                            </sf:SimpleForm>
-                        </blocks>
-                    </ObjectPageSubSection>
-                    <ObjectPageSubSection
-                        title="Regular Information"
-                        titleUppercase="false"
-                    >
-                        <blocks>
-                            <smarttable:SmartTable
-                                entitySet="CRregulatoryinformation"
-                                initiallyVisibleFields="DocCategory,DocName,Avialability,DocStatus,EndDate,Remarks"
-                                enableAutoBinding="true"
-                            >
-                                <smarttable:customToolbar>
-                                    <m:Toolbar>
-                                        <m:ToolbarSpacer />
-                                        <m:Button icon="sap-icon://add" />
-                                    </m:Toolbar>
-                                </smarttable:customToolbar>
-                            </smarttable:SmartTable>
-                        </blocks>
-                    </ObjectPageSubSection>
-                </subSections>
-            </ObjectPageSection>
-            <ObjectPageSection
-                titleUppercase="false"
-                title="Log Details"
-            >
-                <subSections>
-                    <ObjectPageSubSection titleUppercase="false">
-                        <blocks>
-                            <smartform:SmartForm id="smartFormLogDetails">
-                                <smartform:layout>
-                                    <smartform:ColumnLayout
-                                        columnsM="2"
-                                        columnsL="3"
-                                        columnsXL="4"
-                                    />
-                                </smartform:layout>
-                                <smartform:Group>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField
-                                            value="{Createdby}"
-                                            entitySet="CRAttachment"
-                                        />
-                                    </smartform:GroupElement>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField
-                                            value="{Createdon}"
-                                            entitySet="CRAttachment"
-                                        />
-                                    </smartform:GroupElement>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField
-                                            value="{Changedby}"
-                                            entitySet="CRAttachment"
-                                        />
-                                    </smartform:GroupElement>
-                                    <smartform:GroupElement>
-                                        <smartfield:SmartField
-                                            value="{Changedon}"
-                                            entitySet="CRAttachment"
-                                        />
-                                    </smartform:GroupElement>
-                                </smartform:Group>
-                            </smartform:SmartForm>
-                        </blocks>
-                    </ObjectPageSubSection>
-                </subSections>
-            </ObjectPageSection>
-        </sections>
-    </ObjectPageLayout>
+ 
+    </m:OverflowToolbar>
+    </m:content>
+    </m:Page>
 </mvc:View>

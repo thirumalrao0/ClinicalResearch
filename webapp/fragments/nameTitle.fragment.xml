@@ -1,0 +1,54 @@
+<c:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core"
+    xmlns:smartfield="sap.ui.comp.smartfield"
+    xmlns:smartform="sap.ui.comp.smartform"
+>
+    <smartform:SmartForm id="smartFormNameTitle">
+        <smartform:layout>
+            <smartform:ColumnLayout
+                columnsM="2"
+                columnsL="3"
+                columnsXL="4"
+            />
+        </smartform:layout>
+        <smartform:Group>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{SiteCode}" />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{SiteName}" />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{CRCode}" />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{Salutation}" />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{Job_ProfessionalTitle}" />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{CRName}" />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{ClincialRhRole}" />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{Specialities}" />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{CRExperience}" />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{Cerofgoodclinicalprac}" />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{CVAvailable}" />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{Status}" />
+            </smartform:GroupElement>
+        </smartform:Group>
+    </smartform:SmartForm>
+</c:FragmentDefinition>
