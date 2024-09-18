@@ -4,22 +4,58 @@
     displayBlock="true"
     xmlns="sap.m"
     xmlns:sm="sap.ui.comp.smarttable"
+    xmlns:op= "sap.uxap"
 >
     <Page
         id="page"
         title="{i18n>title}"
     >
-        <sm:SmartTable
+    <op:ObjectPageLayout >
+    <op:headerTitle >
+    
+    <op:ObjectPageDynamicHeaderTitle >
+        <op:heading>
+            <Title text="Search Bar" />
+        </op:heading>
+    </op:ObjectPageDynamicHeaderTitle>
+</op:headerTitle>
+  <op:headerContent>
+           <Toolbar class="sapUiResponsiveMargin" >
+         
+               
+                <SearchField
+                    search="search"
+                    width="50%"
+                />
+                 <ToolbarSpacer />
+                  <Button
+                    
+                    tooltip="sort"
+                    icon="sap-icon://sort"
+                    press="sortDialog"
+                />
+          
+           </Toolbar>
+        </op:headerContent>
+
+    <op:sections>
+    <op:ObjectPageSection >
+    <op:subSections>
+    <op:ObjectPageSubSection >
+    <op:blocks>
+     <sm:SmartTable
             id="smartTable"
             entitySet="CRGendata"
             initiallyVisibleFields="SiteCode,SiteName,CRCode,CRName,Specialities,CVAvailable,Status"
             enableAutoBinding="true"
         >
+        <sm:customToolbar>
             <Toolbar>
-                <SearchField
-                    search="search"
-                    width="70%"
-                />
+             <Title text="Clinical Research"/>
+            <ToolbarSpacer
+            
+           />
+           
                 <Button
                     icon="sap-icon://add"
                     press="addBtn"
@@ -30,14 +66,10 @@
                     icon="sap-icon://delete"
                     press="onDelete"
                 />
-                <Button
-                    
-                    tooltip="sort"
-                    icon="sap-icon://sort"
-                    press="sortDialog"
-                />
+              
                 	
             </Toolbar>
+            </sm:customToolbar>
             
             <Table
                 mode="MultiSelect"
@@ -49,5 +81,12 @@
                 />
             </Table>
         </sm:SmartTable>
+    </op:blocks>
+    </op:ObjectPageSubSection>
+    </op:subSections>
+    </op:ObjectPageSection>
+    </op:sections>
+    </op:ObjectPageLayout>
+       
     </Page>
 </mvc:View>

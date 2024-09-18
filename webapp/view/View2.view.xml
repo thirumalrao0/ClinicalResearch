@@ -32,7 +32,7 @@
             </ObjectPageDynamicHeaderTitle>
         </headerTitle>
         <headerContent>
-            <m:Text text="{CRName}"/>
+            <m:Title text="{CRName}"/>
         </headerContent>
         <sections>
             <ObjectPageSection
