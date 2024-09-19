@@ -7,7 +7,7 @@
     <Dialog>
         <smartform:SmartForm editable="true">
          
-            </smartform:layout>
+           
             <smartform:Group>
                 <smartform:GroupElement>
                     <smartfield:SmartField

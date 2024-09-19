@@ -14,7 +14,6 @@ sap.ui.define([
 
         return Controller.extend("task.thirumal.controller.View2", {
             onInit: function () {
-                this.allDialogs = {}
                 this.fmodel = this.getOwnerComponent().getModel()
                 var oRouter = this.getOwnerComponent().getRouter()
                 this.fmodel.setDeferredGroups(this.fmodel.getDeferredGroups().concat(
@@ -39,22 +38,14 @@ sap.ui.define([
 
             },
             globleFragment(path) {
-                var sDialog=path
-             var pDialog=   this.allDialogs[sDialog]
-             if(!pDialog){
                 return Fragment.load({
-                    id:path,
+                    id: this.getView().getId(),
                     name: path,
                     controller: this
                 }).then((frag) => {
                     this.getView().addDependent(frag)
-                    this.allDialogs[sDialog]=frag
                     return frag
                 })
-             }else{
-                return Promise.resolve(pDialog)
-             }
-                
             },
             // deleteItem(){
             //     this.fmodel.remove(this.spath);
@@ -107,6 +98,7 @@ sap.ui.define([
 
             },
             globelForm(evn, path) {
+
                 var frag = this.globleFragment(path).then((frag) => {
                     var gObj = evn.getSource().getBindingContext().getObject()
                     if (path === "task.thirumal.fragments.addRegInfo" || path === "task.thirumal.fragments.addSpec") {
@@ -118,6 +110,8 @@ sap.ui.define([
                             SiteCode: gObj.SiteCode
                         };
                     }
+
+
                     var spath = evn.getSource().getBindingContext().getPath()
                     var tableBindingpath = evn.getSource().getParent().getParent().getTableBindingPath()
                     var oContex = this.fmodel.createEntry(`${spath}/${tableBindingpath}`, {
@@ -127,6 +121,7 @@ sap.ui.define([
                     })
                     frag.setBindingContext(oContex)
                     frag.open()
+
                 })
             },
 
