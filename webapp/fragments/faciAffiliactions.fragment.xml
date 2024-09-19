@@ -2,14 +2,18 @@
     xmlns:m="sap.m"
     xmlns:c="sap.ui.core"
     xmlns:smarttable="sap.ui.comp.smarttable"
+    	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 >
     <smarttable:SmartTable
         entitySet="CRFACILITIESAFFILIATIONS"
         tableBindingPath="to_CRFACILITIESAFFILIATIONS"
         initiallyVisibleFields="Primaryfacility,DepartmentName,Address"
         enableAutoBinding="true"
+        editable="{edit>/isEditable}"
+        app:useSmartField="true"
     >
-        <smarttable:customToolbar>
+        <smarttable:customToolbar >
             <m:Toolbar>
                 <m:ToolbarSpacer />
                 <m:Button

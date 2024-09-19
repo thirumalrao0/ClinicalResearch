@@ -4,7 +4,7 @@
     xmlns:smartform="sap.ui.comp.smartform"
     xmlns:smartfield="sap.ui.comp.smartfield"
 >
-    <smartform:SmartForm id="smartFormLogDetails">
+    <smartform:SmartForm editable="{edit>/isEditable}">
         <smartform:layout>
             <smartform:ColumnLayout
                 columnsM="2"

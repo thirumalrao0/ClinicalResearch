@@ -4,7 +4,7 @@
     xmlns:smartfield="sap.ui.comp.smartfield"
     xmlns:smartform="sap.ui.comp.smartform"
 >
-    <smartform:SmartForm id="smartFormCompanyAddress">
+    <smartform:SmartForm editable="{edit>/isEditable}">
         <smartform:layout>
             <smartform:ColumnLayout
                 columnsM="2"
@@ -30,6 +30,24 @@
             </smartform:GroupElement>
             <smartform:GroupElement>
                 <smartfield:SmartField value="{Address4}" />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{City}" />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{District}" />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{Region}" />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{ZipCode}" />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{Country}" />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{Website}" />
             </smartform:GroupElement>
         </smartform:Group>
     </smartform:SmartForm>

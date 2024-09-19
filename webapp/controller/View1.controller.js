@@ -44,10 +44,14 @@ sap.ui.define([
         this.fModel.resetChanges()
       },
       page2(evn) {
+        sap.ui.core.BusyIndicator.show(0);
         this.getOwnerComponent().getRouter().navTo("RouteView2", {
+          
           path: window.encodeURIComponent(evn.getSource().getBindingContext().getPath())
-
+          
+ 
         })
+ 
       },
       onDelete() {
         var sTable = this.byId("smartTable")
@@ -79,24 +83,24 @@ sap.ui.define([
           this.byId("deleteId").setEnabled(false);
         }
       },
-      search(evn) {
-        var query = evn.getParameter("query")
-        var afilter = new Filter({
-          filters: [
-            new Filter("SiteCode", "Contains", query),
-            new Filter("SiteName", "Contains", query),
-            new Filter("CRCode", "Contains", query),
-            new Filter("CRName", "Contains", query),
-            new Filter("Specialities", "Contains", query),
-            new Filter("CVAvailable", "Contains", query),
-            new Filter("Status", "Contains", query)
-          ]
-        })
-        var sTable = this.byId("smartTable")
-        var gTable = sTable.getTable()
-        var binding = gTable.getBinding("items")
-        binding.filter(afilter)
-      },
+      // search(evn) {
+      //   var query = evn.getParameter("query")
+      //   var afilter = new Filter({
+      //     filters: [
+      //       new Filter("SiteCode", "Contains", query),
+      //       new Filter("SiteName", "Contains", query),
+      //       new Filter("CRCode", "Contains", query),
+      //       new Filter("CRName", "Contains", query),
+      //       new Filter("Specialities", "Contains", query),
+      //       new Filter("CVAvailable", "Contains", query),
+      //       new Filter("Status", "Contains", query)
+      //     ]
+      //   })
+      //   var sTable = this.byId("smartTable")
+      //   var gTable = sTable.getTable()
+      //   var binding = gTable.getBinding("items")
+      //   binding.filter(afilter)
+      // },
       sortDialog() {
         Fragment.load({
           id: this.getView().getId(),

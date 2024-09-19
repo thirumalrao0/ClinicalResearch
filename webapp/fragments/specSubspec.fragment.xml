@@ -2,12 +2,16 @@
     xmlns:c="sap.ui.core"
     xmlns:smarttable="sap.ui.comp.smarttable"
     xmlns:m="sap.m"
+    	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 >
     <smarttable:SmartTable
         entitySet="specialitiessubs"
         tableBindingPath="to_specialitiessubs"
         initiallyVisibleFields="Specialities,SubSpecialities"
         enableAutoBinding="true"
+        app:useSmartField = "true"
+        editable="{edit>/isEditable}"
     >
         <smarttable:customToolbar>
             <m:Toolbar>

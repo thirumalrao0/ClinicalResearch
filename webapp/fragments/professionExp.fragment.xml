@@ -3,12 +3,16 @@
     xmlns:c="sap.ui.core"
     xmlns:smarttable="sap.ui.comp.smarttable"
     xmlns:m="sap.m"
+    	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 >
     <smarttable:SmartTable
         entitySet="ProfessionalExp"
         tableBindingPath="to_PROEXP"
         initiallyVisibleFields="JobTitle,department,Yesrst,Yearcom,Remarks"
         enableAutoBinding="true"
+        editable="{edit>/isEditable}"
+        app:useSmartField="true"
     >
         <smarttable:customToolbar>
             <m:Toolbar>

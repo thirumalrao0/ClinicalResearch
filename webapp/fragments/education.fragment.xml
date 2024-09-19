@@ -2,14 +2,18 @@
     xmlns:c="sap.ui.core"
     xmlns:smarttable="sap.ui.comp.smarttable"
     xmlns:m="sap.m"
+    	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 >
     <smarttable:SmartTable
         entitySet="CREducation"
         tableBindingPath="to_EDUCATION"
         initiallyVisibleFields="Certificate,Institution,SpecialitiesDescription,YearCompleted"
         enableAutoBinding="true"
+        editable="{edit>/isEditable}"
+        app:useSmartField="true"
     >
-        <smarttable:customToolbar>
+        <smarttable:customToolbar >
             <m:Toolbar>
                 <m:ToolbarSpacer />
                 <m:Button

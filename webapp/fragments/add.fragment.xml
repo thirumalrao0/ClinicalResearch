@@ -6,13 +6,8 @@
 >
     <Dialog title="Clinical Researcher">
         <smartform:SmartForm editable="true">
-            <smartform:layout>
-                <smartform:ColumnLayout
-                    columnsM="2"
-                    columnsL="3"
-                    columnsXL="4"
-                />
-            </smartform:layout>
+           
+          
             <smartform:Group>
                 <smartform:GroupElement>
                     <smartfield:SmartField value="{SiteCode}" />
@@ -29,8 +24,7 @@
                 <smartform:GroupElement>
                     <smartfield:SmartField value="{Job_ProfessionalTitle}" />
                 </smartform:GroupElement>
-            </smartform:Group>
-            <smartform:Group>
+           
                 <smartform:GroupElement>
                     <smartfield:SmartField value="{CRName}" />
                 </smartform:GroupElement>

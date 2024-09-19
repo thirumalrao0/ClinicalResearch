@@ -8,7 +8,7 @@
 >
 <m:Page >
 <m:content>
-    <ObjectPageLayout
+    <ObjectPageLayout showFooter="{edit>/isEditable}"
       
     >
         <headerTitle>
@@ -219,29 +219,32 @@
                 </subSections>
             </ObjectPageSection>
         </sections>
-    </ObjectPageLayout>
+            <footer>
     <m:OverflowToolbar class="sapUiResponsiveMargin">
     <m:ToolbarSpacer />
         <m:Button
-            id="idSaveButton"
-            visible="false"
+         
+            visible="{edit>/isEditable}"
             text="Save"
             press="save"
         />
         <m:Button
-            id="idDiscard"
-            visible="false"
+           
+            visible="{edit>/isEditable}"
             text="Discard"
             press="discard"
         />
         <m:Button
-            id="idCancelButton"
-            visible="false"
+           
+            visible="{edit>/isEditable}"
             text="Cancel"
             press="cancel"
         />
  
     </m:OverflowToolbar>
+    </footer>
+    </ObjectPageLayout>
+
     </m:content>
     </m:Page>
 </mvc:View>

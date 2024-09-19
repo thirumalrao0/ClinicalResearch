@@ -4,7 +4,7 @@
     xmlns:smartfield="sap.ui.comp.smartfield"
     xmlns:smartform="sap.ui.comp.smartform"
 >
-    <smartform:SmartForm id="smartFormResearchExperience">
+    <smartform:SmartForm editable="{edit>/isEditable}">
         <smartform:layout>
             <smartform:ColumnLayout
                 columnsM="2"

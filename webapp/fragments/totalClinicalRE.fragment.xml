@@ -3,13 +3,16 @@
     xmlns:c="sap.ui.core"
     xmlns:smarttable="sap.ui.comp.smarttable"
     xmlns:m="sap.m"
+    	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 >
     <smarttable:SmartTable
         entitySet="totalcrexp"
         tableBindingPath="to_TCREXP"
-        id="smartTable7"
+        app:useSmartField="true"
         enableAutoBinding="true"
         initiallyVisibleFields="therapeuticarea,subtherapeuticarea,sponsername,CROname,Numofcomstu,Numofongstu,startdate,enddate,Status"
+        editable="{edit>/isEditable}"
     >
         <smarttable:customToolbar>
             <m:Toolbar>

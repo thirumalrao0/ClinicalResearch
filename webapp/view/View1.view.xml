@@ -4,89 +4,77 @@
     displayBlock="true"
     xmlns="sap.m"
     xmlns:sm="sap.ui.comp.smarttable"
-    xmlns:op= "sap.uxap"
+    xmlns:op="sap.uxap"
+    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
 >
     <Page
         id="page"
         title="{i18n>title}"
     >
-    <op:ObjectPageLayout >
-    <op:headerTitle >
-    
-    <op:ObjectPageDynamicHeaderTitle >
-        <op:heading>
-            <Title text="Search Bar" />
-        </op:heading>
-    </op:ObjectPageDynamicHeaderTitle>
-</op:headerTitle>
-  <op:headerContent>
-           <Toolbar class="sapUiResponsiveMargin" >
-         
-               
-                <SearchField
-                    search="search"
-                    width="50%"
-                />
-                 <ToolbarSpacer />
-                  <Button
-                    
-                    tooltip="sort"
-                    icon="sap-icon://sort"
-                    press="sortDialog"
-                />
-          
-           </Toolbar>
-        </op:headerContent>
-
-    <op:sections>
-    <op:ObjectPageSection >
-    <op:subSections>
-    <op:ObjectPageSubSection >
-    <op:blocks>
-     <sm:SmartTable
-            id="smartTable"
-            entitySet="CRGendata"
-            initiallyVisibleFields="SiteCode,SiteName,CRCode,CRName,Specialities,CVAvailable,Status"
-            enableAutoBinding="true"
-        >
-        <sm:customToolbar>
-            <Toolbar>
-             <Title text="Clinical Research"/>
-            <ToolbarSpacer
-            
-           />
-           
-                <Button
-                    icon="sap-icon://add"
-                    press="addBtn"
-                />
-                <Button
-                    id="deleteId"
-                    enabled="false"
-                    icon="sap-icon://delete"
-                    press="onDelete"
-                />
-              
-                	
-            </Toolbar>
-            </sm:customToolbar>
-            
-            <Table
-                mode="MultiSelect"
-                selectionChange="onSelectionChange"
-            >
-                <ColumnListItem
-                    press="page2"
-                    type="Active"
-                />
-            </Table>
-        </sm:SmartTable>
-    </op:blocks>
-    </op:ObjectPageSubSection>
-    </op:subSections>
-    </op:ObjectPageSection>
-    </op:sections>
-    </op:ObjectPageLayout>
-       
+        <VBox>
+            <op:ObjectPageLayout>
+                <op:headerTitle>
+                    <op:ObjectPageDynamicHeaderTitle />
+                </op:headerTitle>
+                <op:headerContent>
+                    <smartFilterBar:SmartFilterBar
+                        id="smartFilterBar"
+                        entitySet="CRGendata"
+                        persistencyKey="SmartFilter_Explored"
+                        basicSearchFieldName="SiteCode,SiteName,CRCode,CRName,Specialities,CVAvailable,Status"
+                        enableBasicSearch="true"
+                    >
+                        <smartFilterBar:controlConfiguration>
+                            <smartFilterBar:ControlConfiguration key="CRName" />
+                            <smartFilterBar:ControlConfiguration key="SiteName" />
+                        </smartFilterBar:controlConfiguration>
+                    </smartFilterBar:SmartFilterBar>
+                </op:headerContent>
+                <op:sections>
+                    <op:ObjectPageSection>
+                        <op:subSections>
+                            <op:ObjectPageSubSection>
+                                <op:blocks>
+                                    <sm:SmartTable
+                                        id="smartTable"
+                                        entitySet="CRGendata"
+                                        initiallyVisibleFields="SiteCode,SiteName,CRCode,CRName,Specialities,CVAvailable,Status"
+                                        enableAutoBinding="true"
+                                        smartFilterId="smartFilterBar"
+                                        tableType="Table"
+                                    >
+                                        <sm:customToolbar>
+                                            <Toolbar>
+                                                <Title text="Clinical Research" />
+                                                <ToolbarSpacer />
+                                                <Button
+                                                    icon="sap-icon://add"
+                                                    press="addBtn"
+                                                />
+                                                <Button
+                                                    id="deleteId"
+                                                    enabled="false"
+                                                    icon="sap-icon://delete"
+                                                    press="onDelete"
+                                                />
+                                            </Toolbar>
+                                        </sm:customToolbar>
+                                        <Table
+                                            mode="MultiSelect"
+                                            selectionChange="onSelectionChange"
+                                        >
+                                            <ColumnListItem
+                                                press="page2"
+                                                type="Active"
+                                            />
+                                        </Table>
+                                    </sm:SmartTable>
+                                </op:blocks>
+                            </op:ObjectPageSubSection>
+                        </op:subSections>
+                    </op:ObjectPageSection>
+                </op:sections>
+            </op:ObjectPageLayout>
+        </VBox>
     </Page>
-</mvc:View>
+    </mvc:View>

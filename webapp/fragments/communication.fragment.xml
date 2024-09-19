@@ -3,7 +3,7 @@
     xmlns:smartform="sap.ui.comp.smartform"
     xmlns:smartfield="sap.ui.comp.smartfield"
 >
-    <smartform:SmartForm id="smartFormCommunication">
+    <smartform:SmartForm editable="{edit>/isEditable}">
         <smartform:layout>
             <smartform:ColumnLayout
                 columnsM="2"
@@ -17,6 +17,12 @@
             </smartform:GroupElement>
             <smartform:GroupElement>
                 <smartfield:SmartField value="{Extension}" />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{EmailId}" />
+            </smartform:GroupElement>
+            <smartform:GroupElement>
+                <smartfield:SmartField value="{Mobilenumber}" />
             </smartform:GroupElement>
         </smartform:Group>
     </smartform:SmartForm>
